@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <h2>{{ object }}</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="{{ client.image_url }}">
+            </div>
+            <div class="col-sm-6">
+                <ul>
+                    <li>First Name: {{ client.first_name }}</li>
+                    <li>Last Name: {{ client.last_name }}</li>
+                    <li>Date of Birth: {{ client.birth_date }}</li>
+                    <li>Age: {{ client.age }}</li>
+                    <li>Score: {{ client.score }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

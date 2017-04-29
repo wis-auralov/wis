@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container" ng-app="app">
+        <h2>Scores</h2>
+        <div class="row" ng-controller="ScoresCtrl" ng-init="initialize('Ready')">
+            <div ng-repeat="client in clients">
+                <div class="thumbnail">
+                    <img ng-src="[[client.image_url]]">
+                    <div class="caption">
+                        <b>Score: [[ client.score ]]</b>
+                        <button class="btn btn-primary" ng-click="increment_score(client.id)">+1</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
